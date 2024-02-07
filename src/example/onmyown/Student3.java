@@ -1,4 +1,4 @@
-package example;
+package example.onmyown;
 
 public class Student3 {
     private int no;
@@ -67,7 +67,7 @@ public class Student3 {
         this.math = math;
         this.eng = eng;
         this.tot = kor + math + eng;
-        this.avg = tot/3f;
+        this.avg = tot / 3;
     }
 
     public String toString() {

@@ -33,8 +33,20 @@ CREATE TABLE student(
 
 --시퀀스 생성
 
-select * from student;
-
 DROP SEQUENCE STUDENT_SEQ;
 
 CREATE SEQUENCE STUDENT_SEQ;
+
+-- 더미 데이터를 이용한 INSERT 쿼리문 작성해 봅니다.
+---		1) 평균이 100점인 경우 GRADE를 구해봅시다.
+SELECT GRADE
+FROM HAKJUM
+WHERE 100 BETWEEN LOWSCORE AND HISCORE;
+
+---		2) 위에서 사용한 쿼리문을 INSERT문에 사용합니다.
+INSERT INTO STUDENT
+VALUES(1, '홍길동', 100,100,100,300,100,
+		(SELECT GRADE FROM HAKJUM WHERE 100 BETWEEN LOWSCORE AND HISCORE)
+		);
+		
+		
