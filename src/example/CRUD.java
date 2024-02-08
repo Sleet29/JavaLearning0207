@@ -111,11 +111,11 @@ public class CRUD {
     }
 
     private static void selectAll(DAO dao) {
-        ArrayList<Student3> allEmployees = Student3.selectAll();
-        if (allEmployees.isEmpty()) {
+        ArrayList<Student3> list = dao.selectAll();
+        if (list.isEmpty()) {
             System.out.println("테이블이 비어있습니다.");
         } else {
-            for (Student3 emp : allEmployees) {
+            for (Student3 emp : list) {
                 System.out.println(emp); 
             }
         }
